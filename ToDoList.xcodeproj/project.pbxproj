@@ -10,6 +10,7 @@
 		CE35DF9B8A482F55B14687A7 /* Pods_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A574428467913DFDC8D210 /* Pods_ToDoList.framework */; };
 		DF609B222AAEABC800E56551 /* KakaoLoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF609B212AAEABC800E56551 /* KakaoLoginNetwork.swift */; };
 		DF69226F2A876AAF00C87B74 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69226E2A876AAF00C87B74 /* ImageNames.swift */; };
+		DF6E5C6A2AD58BB800675C13 /* GoogleLoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6E5C692AD58BB800675C13 /* GoogleLoginNetwork.swift */; };
 		DF731A682A88FA7100223DD2 /* LoginImageFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF731A672A88FA7100223DD2 /* LoginImageFunc.swift */; };
 		DF731A6A2A8907A900223DD2 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF731A692A8907A900223DD2 /* SuccessViewController.swift */; };
 		DF93CCBC2A80BA7F00DD9DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF93CCBB2A80BA7F00DD9DCD /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		D21A568EC045A25E40B35A27 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		DF609B212AAEABC800E56551 /* KakaoLoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginNetwork.swift; sourceTree = "<group>"; };
 		DF69226E2A876AAF00C87B74 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
+		DF6E5C692AD58BB800675C13 /* GoogleLoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginNetwork.swift; sourceTree = "<group>"; };
 		DF731A672A88FA7100223DD2 /* LoginImageFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageFunc.swift; sourceTree = "<group>"; };
 		DF731A692A8907A900223DD2 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		DF93CCB82A80BA7F00DD9DCD /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DF609B212AAEABC800E56551 /* KakaoLoginNetwork.swift */,
+				DF6E5C692AD58BB800675C13 /* GoogleLoginNetwork.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				DF609B222AAEABC800E56551 /* KakaoLoginNetwork.swift in Sources */,
 				DF93CCBC2A80BA7F00DD9DCD /* AppDelegate.swift in Sources */,
 				DF93CCBE2A80BA7F00DD9DCD /* SceneDelegate.swift in Sources */,
+				DF6E5C6A2AD58BB800675C13 /* GoogleLoginNetwork.swift in Sources */,
 				DF93CCC62A80BA7F00DD9DCD /* ToDoList.xcdatamodeld in Sources */,
 				DF69226F2A876AAF00C87B74 /* ImageNames.swift in Sources */,
 				DF731A6A2A8907A900223DD2 /* SuccessViewController.swift in Sources */,

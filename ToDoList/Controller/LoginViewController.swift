@@ -27,9 +27,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func googleButtonTapped(_ sender: GIDSignInButton) {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-            guard error == nil else { return }
-        }
+        GoogleLoginNetwork.shared.googleLogin(viewController: self)
     }
     
     @IBAction func kakaoButtonTapped(_ sender: UIButton) {
