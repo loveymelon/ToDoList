@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.7.1)
+  - Alamofire (5.8.1)
   - AppAuth (1.6.2):
     - AppAuth/Core (= 1.6.2)
     - AppAuth/ExternalUserAgent (= 1.6.2)
@@ -14,50 +14,54 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 4.0, >= 1.5)
   - GTMSessionFetcher/Core (3.1.1)
-  - KakaoSDK (2.16.0):
-    - KakaoSDKAuth (= 2.16.0)
-    - KakaoSDKCommon (= 2.16.0)
-    - KakaoSDKFriend (= 2.16.0)
-    - KakaoSDKNavi (= 2.16.0)
-    - KakaoSDKShare (= 2.16.0)
-    - KakaoSDKStory (= 2.16.0)
-    - KakaoSDKTalk (= 2.16.0)
-    - KakaoSDKTemplate (= 2.16.0)
-    - KakaoSDKUser (= 2.16.0)
-  - KakaoSDKAuth (2.16.0):
-    - KakaoSDKCommon (= 2.16.0)
-  - KakaoSDKCommon (2.16.0):
-    - KakaoSDKCommon/Common (= 2.16.0)
-    - KakaoSDKCommon/Network (= 2.16.0)
-  - KakaoSDKCommon/Common (2.16.0)
-  - KakaoSDKCommon/Network (2.16.0):
+  - KakaoSDK (2.19.0):
+    - KakaoSDKAuth (= 2.19.0)
+    - KakaoSDKCert (= 2.19.0)
+    - KakaoSDKCommon (= 2.19.0)
+    - KakaoSDKFriend (= 2.19.0)
+    - KakaoSDKNavi (= 2.19.0)
+    - KakaoSDKShare (= 2.19.0)
+    - KakaoSDKTalk (= 2.19.0)
+    - KakaoSDKTemplate (= 2.19.0)
+    - KakaoSDKUser (= 2.19.0)
+  - KakaoSDKAuth (2.19.0):
+    - KakaoSDKCommon (= 2.19.0)
+  - KakaoSDKCert (2.19.0):
+    - KakaoSDKCertCore (= 2.19.0)
+    - KakaoSDKUser (= 2.19.0)
+  - KakaoSDKCertCore (2.19.0)
+  - KakaoSDKCommon (2.19.0):
+    - KakaoSDKCommon/Common (= 2.19.0)
+    - KakaoSDKCommon/Network (= 2.19.0)
+  - KakaoSDKCommon/Common (2.19.0)
+  - KakaoSDKCommon/Network (2.19.0):
     - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.16.0)
-  - KakaoSDKFriend (2.16.0):
-    - KakaoSDKFriendCore (= 2.16.0)
-    - KakaoSDKUser (= 2.16.0)
-  - KakaoSDKFriendCore (2.16.0)
-  - KakaoSDKNavi (2.16.0):
-    - KakaoSDKCommon/Common (= 2.16.0)
-  - KakaoSDKShare (2.16.0):
-    - KakaoSDKCommon (= 2.16.0)
-    - KakaoSDKTemplate (= 2.16.0)
-  - KakaoSDKStory (2.16.0):
-    - KakaoSDKUser (= 2.16.0)
-  - KakaoSDKTalk (2.16.0):
-    - KakaoSDKTemplate (= 2.16.0)
-    - KakaoSDKUser (= 2.16.0)
-  - KakaoSDKTemplate (2.16.0):
-    - KakaoSDKCommon/Common (= 2.16.0)
-  - KakaoSDKUser (2.16.0):
-    - KakaoSDKAuth (= 2.16.0)
+    - KakaoSDKCommon/Common (= 2.19.0)
+  - KakaoSDKFriend (2.19.0):
+    - KakaoSDKFriendCore (= 2.19.0)
+    - KakaoSDKUser (= 2.19.0)
+  - KakaoSDKFriendCore (2.19.0)
+  - KakaoSDKNavi (2.19.0):
+    - KakaoSDKCommon/Common (= 2.19.0)
+  - KakaoSDKShare (2.19.0):
+    - KakaoSDKCommon (= 2.19.0)
+    - KakaoSDKTemplate (= 2.19.0)
+  - KakaoSDKTalk (2.19.0):
+    - KakaoSDKTemplate (= 2.19.0)
+    - KakaoSDKUser (= 2.19.0)
+  - KakaoSDKTemplate (2.19.0):
+    - KakaoSDKCommon/Common (= 2.19.0)
+  - KakaoSDKUser (2.19.0):
+    - KakaoSDKAuth (= 2.19.0)
   - SideMenu (6.5.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleSignIn
   - KakaoSDK
   - SideMenu
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -68,36 +72,40 @@ SPEC REPOS:
     - GTMSessionFetcher
     - KakaoSDK
     - KakaoSDKAuth
+    - KakaoSDKCert
+    - KakaoSDKCertCore
     - KakaoSDKCommon
     - KakaoSDKFriend
     - KakaoSDKFriendCore
     - KakaoSDKNavi
     - KakaoSDKShare
-    - KakaoSDKStory
     - KakaoSDKTalk
     - KakaoSDKTemplate
     - KakaoSDKUser
     - SideMenu
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
   GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
   GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
-  KakaoSDK: 53f557e4b10bb0a90965588691bba7234c4d4728
-  KakaoSDKAuth: 1b85ed7c41b0517bfd1fc9dc46c292c75b8cb610
-  KakaoSDKCommon: d6579aa2e9d963d74e13d741cbf1cce48b8b0c17
-  KakaoSDKFriend: da5a10cdbe33a4502a6841cacf2d5e4ff5a34a36
-  KakaoSDKFriendCore: 67679bbbfa4f23ff7589c7a56f48d72f48fc1da2
-  KakaoSDKNavi: 928ff5b9118e8ca6f2489625013c1c5f1306be41
-  KakaoSDKShare: efc0415c4f33274232604eeaf96fb03641facdca
-  KakaoSDKStory: 4d0b7fd7ddaba5fe002764fb4d80a4e78e7466ab
-  KakaoSDKTalk: 44545bd9a1ebc144795eb6e927960b10cf8252f5
-  KakaoSDKTemplate: 7e478a3cda6f5879b475546bfcd667b464fbb6d0
-  KakaoSDKUser: 427e5b3884abd19ee6d9a7bd6e3f3029eb2968b8
+  KakaoSDK: 49b60409f1e7c0efac0904e7acb7f54a8a88ad9b
+  KakaoSDKAuth: a1b4c416e54fbfdf086db8591405a17f88ffea64
+  KakaoSDKCert: 7cd0cc7d1042b728044f651805af599b5fc5b7e0
+  KakaoSDKCertCore: 3b259b26b5d072c04b1f2164b2944e530e64fa6a
+  KakaoSDKCommon: d642a52ccf618036478643694212c072d5eceea6
+  KakaoSDKFriend: 66e0fbf2d42cf6f06a98b93d2aec13e11e9ac8b7
+  KakaoSDKFriendCore: 4a24ec8a921c3e3b3fa615c801354cf432eddabc
+  KakaoSDKNavi: e2788a4c01a9981d46a18d1bfe6196a8f47f9507
+  KakaoSDKShare: 07a70ea20cea3b1c507991eac600800a42609590
+  KakaoSDKTalk: 9ac8cbc6e396a3e4d7d66099ba22ffbf3095d8ca
+  KakaoSDKTemplate: bb6cc31aec26a7f876fb66ee4c8882f9ce1ca2d5
+  KakaoSDKUser: f21d7c3baf7cf2d08784cafc97aa9d49f2141624
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: d5338c81b30dad8edec3e30114a795958528d2c7
+PODFILE CHECKSUM: 9426276cbfefa84cdac327011b6f183fb078f768
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.14.3

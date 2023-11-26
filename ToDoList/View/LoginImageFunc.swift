@@ -13,7 +13,7 @@ struct LoginImageFunc {
         var loginImageArray: [UIImage] = []
         
         for i in LoginImageNames.loginImageNames {
-            loginImageArray.append(UIImage(named: i)!.applyBlur(radius: 3))
+            loginImageArray.append(UIImage(named: i)!.applyBlur(radius: 10))
         }
         
         //이미지 애니메이션 추가

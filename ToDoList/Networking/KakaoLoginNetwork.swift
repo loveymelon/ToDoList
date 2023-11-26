@@ -12,7 +12,7 @@ import KakaoSDKUser
 import KakaoSDKCommon
 
 // Login완료시 sceneDelegate에서 navigationController의 rootview를 변경
-protocol KakaoLoginDelegate {
+protocol KakaoLoginDelegate: AnyObject {
     func loginSuccessValue()
 }
 
@@ -23,7 +23,7 @@ class KakaoLoginNetwork {
     
     private init() {}
     
-    var delegate: KakaoLoginDelegate?
+    weak var delegate: KakaoLoginDelegate?
     
     func loginWithApp() {
         UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
@@ -63,7 +63,15 @@ class KakaoLoginNetwork {
                 self.delegate?.loginSuccessValue()
                 //do something
                 _ = user
+                let kakaoInfo = KakaoUserInfo()
+                kakaoInfo.registrationId = "kakao"
+                kakaoInfo.name = user?.kakaoAccount?.profile?.nickname
+                kakaoInfo.id = user?.kakaoAccount?.email
+                kakaoInfo.pw = String((user?.id)!)
+                kakaoInfo.imageUrl = user?.kakaoAccount?.profile?.profileImageUrl?.absoluteString
                 
+                self.postUserInfo(kakaoUserInfo: kakaoInfo)
+                //서버 성공하면 self.delegate?.loginSuccessValue()
                 /*if let url = user?.kakaoAccount?.profile?.profileImageUrl{
                     
                 }*/
@@ -103,6 +111,36 @@ class KakaoLoginNetwork {
                 self.loginWithWeb()
             }
         } //리프레쉬 토큰 존재 유무 파악이므로 else문에 재로그인 로직 필요
+    }
+    
+    func postUserInfo(kakaoUserInfo: KakaoUserInfo) {
+        let url = "http://ec2-13-209-24-98.ap-northeast-2.compute.amazonaws.com:8080/api/members/join"
+        let params = ["id" : kakaoUserInfo.id, "pw" : kakaoUserInfo.pw, "name" : kakaoUserInfo.name, "imageUrl" : kakaoUserInfo.imageUrl, "registrationId" : kakaoUserInfo.registrationId] as Dictionary
+
+        AF.request(url,
+                   method: .post,
+                   parameters: params,
+                   encoding: JSONEncoding(options: []),
+                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
+            .responseJSON { response in
+
+            /** 서버로부터 받은 데이터 활용 */
+            switch response.result {
+            case .success(let data):
+                self.delegate?.loginSuccessValue()
+                print("kakaoSuccess")
+                print(data)
+                break
+                /** 정상적으로 reponse를 받은 경우 */
+            case .failure(let error):
+                print("kakao errorCode\(error)")
+                break
+                /** 그렇지 않은 경우 */
+            }
+        }
+        
+        
+        
     }
 }
 

@@ -11,4 +11,5 @@ target 'ToDoList' do
   pod 'KakaoSDK'
   pod 'GoogleSignIn'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

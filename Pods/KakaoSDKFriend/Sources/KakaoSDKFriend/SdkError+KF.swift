@@ -14,11 +14,16 @@
 
 import Foundation
 import KakaoSDKCommon
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
 @_exported import KakaoSDKFriendCore
 
-/// :nodoc: //SdkError casting helper
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
+/// SdkError casting helper
 extension SdkError {
-    /// :nodoc:
     public init(fromKfSdkError kfSdkError:KFSdkError) {
         switch kfSdkError {
         case .ClientFailed(let reason, let message):
@@ -29,9 +34,11 @@ extension SdkError {
     }
 }
 
-/// :nodoc: //SdkError casting helper
+#if swift(>=5.8)
+@_documentation(visibility: private)
+#endif
+/// SdkError casting helper
 extension ClientFailureReason {
-    /// :nodoc:
     public init(fromKfClientFailureReason kfClientFailureReason:KFClientFailureReason) {
         switch kfClientFailureReason {
         case .Unknown:

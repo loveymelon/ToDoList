@@ -7,6 +7,7 @@
 
 import Foundation
 import GoogleSignIn
+import Alamofire
 
 class GoogleLoginNetwork {
     
@@ -36,7 +37,34 @@ class GoogleLoginNetwork {
             let familyName = user.profile?.familyName
             
             let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            print(fullName)
+            
+            let idToken = user.idToken?.tokenString
+            self.tokenSignIn(idToken: idToken!)
         }
+    }
+    
+    func tokenSignIn(idToken: String) {
+        
+        let url = URL(string: "https://yourbackend.example.com/tokensignin")!
+        let params = ["idToken": idToken] as Dictionary
+        
+        
+        AF.request(url,
+                    method: .post,
+                    parameters: params,
+                    encoding: JSONEncoding(options: []),
+                    headers: ["Content-Type":"application/json", "Accept":"application/json"])
+             .responseJSON { response in
+
+             /** 서버로부터 받은 데이터 활용 */
+             switch response.result {
+             case .success(let data):
+                 break
+                 
+                 /** 정상적으로 reponse를 받은 경우 */
+             case .failure(let error): break
+                 /** 그렇지 않은 경우 */
+             }
+         }
     }
 }

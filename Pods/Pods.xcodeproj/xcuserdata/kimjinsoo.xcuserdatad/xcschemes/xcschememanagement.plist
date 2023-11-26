@@ -60,89 +60,103 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>KakaoSDKCommon.xcscheme</key>
+		<key>KakaoSDKCert.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>KakaoSDKFriend.xcscheme</key>
+		<key>KakaoSDKCertCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>KakaoSDKFriendCore-KakaoSDKFriendResources.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>KakaoSDKFriendCore.xcscheme</key>
+		<key>KakaoSDKCommon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>KakaoSDKNavi.xcscheme</key>
+		<key>KakaoSDKFriend.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>11</integer>
 		</dict>
-		<key>KakaoSDKShare.xcscheme</key>
+		<key>KakaoSDKFriendCore-KakaoSDKFriendResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>KakaoSDKStory.xcscheme</key>
+		<key>KakaoSDKFriendCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>KakaoSDKNavi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
-		<key>KakaoSDKTalk.xcscheme</key>
+		<key>KakaoSDKShare.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
-		<key>KakaoSDKTemplate.xcscheme</key>
+		<key>KakaoSDKTalk.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>KakaoSDKUser.xcscheme</key>
+		<key>KakaoSDKTemplate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
-		<key>Pods-ToDoList.xcscheme</key>
+		<key>KakaoSDKUser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
-		<key>SideMenu.xcscheme</key>
+		<key>Pods-ToDoList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>19</integer>
+		</dict>
+		<key>SideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

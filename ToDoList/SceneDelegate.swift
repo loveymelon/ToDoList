@@ -30,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         KakaoLoginNetwork.shared.delegate = self // 앱 시작 지점이기 때문에 여기에 선언
+        AppLoginNetwork.shared.delegate = self
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -77,13 +78,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
-extension SceneDelegate: KakaoLoginDelegate {
+extension SceneDelegate: KakaoLoginDelegate, AppLoginDelegate {
     func loginSuccessValue() {
         DispatchQueue.main.async {
-            let rootViewController = self.storyBoard.instantiateViewController(identifier: "SuccessViewController")
-            let navigationController = UINavigationController(rootViewController: rootViewController)
-            self.window?.rootViewController = navigationController
-            print("a")
+            let tabBarController = self.storyBoard.instantiateViewController(withIdentifier: "UITabBarController")
+            
+            self.window?.rootViewController = tabBarController
+        }
+    }
+    
+    func loginSuccess() {
+        DispatchQueue.main.async {
+            let tabBarController = self.storyBoard.instantiateViewController(withIdentifier: "UITabBarController")
+            
+            self.window?.rootViewController = tabBarController
         }
     }
 }

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginImageVIew: UIImageView!
     @IBOutlet weak var googleLoginButton: GIDSignInButton!
+    @IBOutlet weak var appLoginView: UIView!
     
     var loginImage = LoginImageFunc()
 
@@ -20,10 +21,25 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setLoginImageView()
+        labelAddGesture()
     }
 
     func setLoginImageView() {
         self.loginImageVIew.image = loginImage.setLoginImage()
+    }
+    
+    func labelAddGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tappedAppLoginView))
+        appLoginView.isUserInteractionEnabled = true //view를 위한 touch, press, keyboard 그리고 focus event는 event queue에서 무시하지않게 설정
+        appLoginView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func tappedAppLoginView() {
+        
+        if let appLoginVC = storyboard?.instantiateViewController(withIdentifier: "AppLoginViewController") as? AppLoginViewController {
+            navigationController?.pushViewController(appLoginVC, animated: true)
+        }
+        
     }
     
     @IBAction func googleButtonTapped(_ sender: GIDSignInButton) {
